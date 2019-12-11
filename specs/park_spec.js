@@ -8,6 +8,7 @@ let dinosaur1;
 let dinosaur2;
 let dinosaur3;
 let dinosaur4;
+let dinosaur5;
   beforeEach(function () {
     dinosaur1 = new Dinosaur("T-Rex", "Carnivore", 350)
     dinosaur2 = new Dinosaur("Brachiosaurus", "Herbivore", 200)
@@ -15,7 +16,7 @@ let dinosaur4;
     dinosaur4 = new Dinosaur("T-Rex", "Carnivore", 250)
     dinosaur5 = new Dinosaur("Oviraptor", "Omnivore", 70)
     park = new Park("Jurassic Park", 50, [dinosaur1, dinosaur2])
-  })
+  });
 
   it('should have a name', function(){
     const result = park.name;
@@ -83,4 +84,5 @@ let dinosaur4;
     result = park.dietTypes()
     assert.deepStrictEqual(result, {Carnivore: 3, Herbivore: 1, Omnivore: 1})
   });
+  
 });
