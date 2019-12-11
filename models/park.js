@@ -57,15 +57,7 @@ Park.prototype.removeSpecies = function (species) {
 Park.prototype.dietTypes = function () {
   let dietTypes = {Carnivore: 0, Herbivore: 0, Omnivore: 0}
   for (const dinosaur of this.dinosaurs) {
-    if (dinosaur.diet == "Carnivore") {
-      dietTypes.Carnivore += 1
-    }
-    else if (dinosaur.diet == "Herbivore") {
-      dietTypes.Herbivore += 1
-    }
-    else {
-      dietTypes.Omnivore += 1
-    };
+    dietTypes[dinosaur.diet] += 1
   };
   return dietTypes
 };
